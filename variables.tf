@@ -1,10 +1,3 @@
-variable "tf_backend_s3" {
-  type = object({
-    region = string
-    bucket = string
-    key    = string
-  })
-}
 
 variable "aws_region" {
   type = string
