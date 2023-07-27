@@ -21,6 +21,11 @@ variable "max_nat_gateway_count" {
   default = 0
 }
 
+variable "tags" {
+  type    = map(string)
+  default = {}
+}
+
 variable "vpc_tags" {
   type    = map(string)
   default = {}

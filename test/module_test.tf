@@ -1,4 +1,5 @@
-module "my_aws_vpc" {
+module "aws_vpc" {
+
   source = "./.."
 
   aws_region            = "us-east-1"
@@ -7,28 +8,33 @@ module "my_aws_vpc" {
   max_az_count          = 2
   max_nat_gateway_count = 1
 
+  tags = {
+    Environment = "Test"
+    Project     = "Terraform AWS VPC Module Test"
+  }
+
   vpc_tags = {
-    Foo = "vpc"
+    vpc = "vpc"
   }
   internet_gateway_tags = {
-    Foo = "internet_gateway"
+    internet_gateway = "internet_gateway"
   }
   public_subnet_tags = {
-    Foo = "public_subnet"
+    public_subnet = "public_subnet"
   }
   public_route_table_tags = {
-    Foo = "public_route_table"
+    public_route_table = "public_route_table"
   }
   private_subnet_tags = {
-    Foo = "private_subnet"
+    private_subnet = "private_subnet"
   }
   nat_eip_tags = {
-    Foo = "nat_eip"
+    nat_eip = "nat_eip"
   }
   nat_gateway_tags = {
-    Foo = "nat_gateway"
+    nat_gateway = "nat_gateway"
   }
   private_route_table_tags = {
-    Foo = "private_route_table"
+    private_route_table = "private_route_table"
   }
 }
