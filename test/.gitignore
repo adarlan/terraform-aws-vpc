@@ -1,0 +1,5 @@
+.terraform/
+.terraform.lock.hcl
+backend.tf
+plan_create
+plan_destroy
