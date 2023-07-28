@@ -9,6 +9,10 @@ resource "aws_vpc" "vpc" {
   )
 }
 
+output "vpc_id" {
+  value = aws_vpc.vpd.id
+}
+
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc.id
   tags = merge(
